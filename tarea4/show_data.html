@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRS | Data Received</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-frame"><img src="imagenes/logo.webp" alt="Logo"></div>
+        <nav>
+            <a href="home.html" class="nav-item">Home</a>
+            <a href="about.html" class="nav-item">About</a>
+            <a href="general_info.html" class="nav-item">General Info</a>
+            <a href="rules.html" class="nav-item">Rules</a>
+            <a href="registration.html" class="nav-item">Registration</a>
+            <a href="contact.html" class="nav-item">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero-wrapper">
+        <img src="imagenes/img1.jpeg" alt="Registration Confirmed">
+        <div class="hero-overlay"><h1>REGISTRATION RECEIVED</h1></div>
+    </div>
+
+    <div class="black-banner">Data Confirmation</div>
+
+    <main class="main-grid">
+        <div class="side-logo">
+            <img src="imagenes/logo.webp" alt="Success">
+        </div>
+        
+        <div class="info-card">
+            <div class="success-banner">
+                <h2 style="margin:0; color:var(--accent-green);">¡Envío Exitoso!</h2>
+                <p>La siguiente información ha sido procesada correctamente:</p>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th align="center">Form Field</th>
+                        <th align="center">Field Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <script language="javascript">
+                        var args = location.search.substr(1).split('&');
+                        for (var i = 0; i < args.length; ++i) {
+                            var parts = args[i].split('=');
+                            if (parts != null && parts[0] != "") {
+                                var field = parts[0].replace(/_/g, ' ');
+                                var value = parts[1];
+                                if (value == null || value == "") {
+                                    value = "null";
+                                }
+                                else {
+                                    value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+                                }
+
+                                document.writeln('<tr><td class="field-name" align="center">' + field + '</td>');
+                                document.writeln('<td class="field-value" align="center">' + value + '</td></tr>');
+                            }
+                        }
+                    </script>
+                </tbody>
+            </table>
+
+            <noscript>
+                <div class="event-row" style="border-color:red; margin-top:20px;">
+                    <strong style="color:red;">Error: JavaScript Desactivado</strong>
+                    <p>Para visualizar los datos enviados, activa JavaScript en tu navegador.</p>
+                </div>
+            </noscript>
+
+            <div style="margin-top:30px; text-align:right;">
+                <a href="home.html" class="nav-item" style="border:1px solid var(--accent-green); padding:10px 20px;">Volver al Inicio</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
