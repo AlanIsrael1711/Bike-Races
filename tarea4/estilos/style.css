@@ -207,7 +207,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- ESTILOS PARA EL FORMULARIO (Registration.html) --- */
 .registration-form h3 {
     color: var(--accent-blue);
     margin-top: 30px;
@@ -229,7 +228,6 @@ a:hover {
     color: var(--accent-green);
 }
 
-/* Campos de entrada, selectores y áreas de texto */
 input[type="text"], 
 input[type="email"], 
 input[type="tel"], 
@@ -294,7 +292,6 @@ input:focus, select:focus {
     transform: translateY(-2px);
 }
 
-/* --- ESTILOS PARA LA TABLA DE DATOS (show_data.html) --- */
 .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -332,16 +329,15 @@ input:focus, select:focus {
     background: rgba(0, 255, 135, 0.05);
 }
 
-/* --- ESTILO PARA EL MAPA --- */
 .google-map-frame {
-    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3); /* Brillo azul sutil */
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
     transition: 0.3s;
     overflow: hidden;
     margin-top: 15px;
 }
 
 .google-map-frame:hover {
-    box-shadow: 0 0 25px var(--accent-blue); /* Se intensifica al pasar el ratón */
+    box-shadow: 0 0 25px var(--accent-blue);
     border-color: var(--accent-green);
 }
 
