@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BRS | Formulario de Registro</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-frame"><img src="imagenes/logo.webp" alt="Logo"></div>
+        <nav>
+            <a href="home.html" class="nav-item">Home</a>
+            <a href="about.html" class="nav-item">About</a>
+            <a href="general_info.html" class="nav-item">General Info</a>
+            <a href="rules.html" class="nav-item">Rules</a>
+            <a href="registration.html" class="nav-item active">Registration</a>
+            <a href="contact.html" class="nav-item">Contact</a>
+        </nav>
+    </header>
+
+    <div class="black-banner">Formulario de Registro</div>
+
+    <main class="main-grid">
+        <div class="side-logo"><img src="imagenes/logo.webp" alt="Logo"></div>
+        
+        <div class="info-card">
+            <form action="show_data.html" method="GET" class="registration-form">
+                
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="first_name">Nombre del participante:</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Apellido:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="street">Dirección de la calle:</label>
+                    <input type="text" id="street" name="street_address">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">Ciudad:</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">Código Postal:</label>
+                        <input type="text" id="zip" name="postal_code">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">País:</label>
+                    <input type="text" id="country" name="country">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dob">Fecha de nacimiento:</label>
+                        <input type="date" id="dob" name="birth_date">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Edad:</label>
+                        <input type="number" id="age" name="age">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Género:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+                </div>
+
+                <h3>Contact Information</h3>
+                <div class="form-group">
+                    <label for="phone">Teléfono móvil:</label>
+                    <input type="tel" id="phone" name="mobile_phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Dirección de correo electrónico:</label>
+                    <input type="email" id="email" name="email_address" required>
+                </div>
+
+                <h3>Membresía y Experiencia</h3>
+                <div class="form-group">
+                    <label for="club">Membresía del club:</label>
+                    <select id="club" name="club_membership">
+                        <option value="none">None</option>
+                        <option value="uci">UCI-Affiliated Federation</option>
+                        <option value="british">British Cycling</option>
+                        <option value="french">Fédération Française de Cyclisme</option>
+                        <option value="catalana">Federació Catalana de Ciclisme</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experiencia previa:</label>
+                    <select id="experience" name="cycling_experience">
+                        <option value="none">None</option>
+                        <option value="local">Local Trail/Community Races</option>
+                        <option value="regional">Enduro/Downhill Regional</option>
+                        <option value="xco">Cross-Country (XCO)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="license">Licencia de ciclismo:</label>
+                    <select id="license" name="cycling_license">
+                        <option value="none">None</option>
+                        <option value="national">National Federation License</option>
+                        <option value="uci">UCI License</option>
+                    </select>
+                </div>
+
+                <h3>Emergency Contact</h3>
+                <div class="form-group">
+                    <label for="em_name">Nombre de contacto:</label>
+                    <input type="text" id="em_name" name="emergency_name">
+                </div>
+                <div class="form-group">
+                    <label for="em_phone">Teléfono de emergencia:</label>
+                    <input type="tel" id="em_phone" name="emergency_phone">
+                </div>
+
+                <h3>Rider Agreement</h3>
+                <div class="agreement-text">
+                    <p>I agree to abide by all rules and safety regulations of the BRS. I understand that mountain biking is inherently dangerous. [cite: 46, 47]</p>
+                    <p>I waive all liability and indemnify BRS from any claims arising from participation. [cite: 49, 51]</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="signature">Firma Digital (Escriba su nombre completo):</label>
+                    <input type="text" id="signature" name="rider_signature" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Fecha de firma:</label>
+                    <input type="date" id="date" name="signature_date" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
